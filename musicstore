@@ -1,0 +1,28 @@
+--Creat music personal store
+
+CREATE TABLE number_one_singles (id INTEGER PRIMARY KEY, artist TEXT, song INTEGER, released_year INTEGER, price_according_to_my_rating INTEGER);
+
+INSERT INTO number_one_singles VALUES (1,"Madonna","Papa Don't Preach", 1986, 7);
+INSERT INTO number_one_singles VALUES (2,"Michael Jackson","Bad", 1987, 8);
+INSERT INTO number_one_singles VALUES (3,"Lady Gaga","Poker Face" , 2009, 7);
+INSERT INTO number_one_singles VALUES (4,"Whitney Houston","I Wanna Dance With Somebody (Who Loves Me)", 1993, 6);
+INSERT INTO number_one_singles VALUES (5,"Bryan Adams","(Everything I Do) I Do It for You", 1991, 5);
+INSERT INTO number_one_singles VALUES (6,"Bon Jovi","Always", 1994, 5);
+INSERT INTO number_one_singles VALUES (7,"Britney Spears","Oops!... I Did It Again", 2000, 6);
+INSERT INTO number_one_singles VALUES (8,"Robbie Williams","Somethin' Stupid", 2002, 8);
+INSERT INTO number_one_singles VALUES (9,"Nelly Furtado","All Good Things (Come to an End)", 2007, 7);
+INSERT INTO number_one_singles VALUES (10,"Wet Wet Wet","Love is All Around", 1994, 4);
+INSERT INTO number_one_singles VALUES (11,"Take That","Back for Good", 1995, 5);
+INSERT INTO number_one_singles VALUES (12,"The Fugees","Killing Me Softly", 1996, 6);
+INSERT INTO number_one_singles VALUES (13,"Elton John","Candle in the Wind", 1997, 6);
+INSERT INTO number_one_singles VALUES (14,"Cher","Believe", 1999, 8);
+INSERT INTO number_one_singles VALUES (15,"Backstreet Boys","I Want It That Way", 1999, 7);
+INSERT INTO number_one_singles VALUES (16,"Backstreet Boys","I Want It That Way", 1999, 7);
+
+--display the database order by single hit released year
+
+SELECT*FROM number_one_singles ORDER BY released_year DESC;
+
+---display most popular hits according to my musical taste
+
+SELECT*FROM number_one_singles WHERE price_according_to_my_rating <= 8;
