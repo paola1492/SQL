@@ -1,0 +1,65 @@
+/* Create table about the people and what they do here */
+/* Spotify’s Top 50 Female Artists of 2020. Source: CHART DATA*/
+/* Spin-off of "Project: Famous people_Top 50 female singers Spotify 2020"*/
+
+CREATE TABLE female_artists  (id INTEGER PRIMARY KEY, name TEXT, birth_country TEXT, birth_year INTEGER, main_genre TEXT);
+
+INSERT INTO female_artists VALUES (1, "Billie Eilish", "United States", 2001, "Pop");
+INSERT INTO female_artists VALUES (2, "Taylor Swift", "United States", 1989, "Pop");
+INSERT INTO female_artists VALUES (3, "Ariana Grande", "United States", 1993, "Pop");
+INSERT INTO female_artists VALUES (4, "Dua Lipa", "United Kingdom", 1995 , "Pop");
+INSERT INTO female_artists VALUES (5, "Halsey", "United States", 1994 , "Pop");
+INSERT INTO female_artists VALUES (6, "Lady Gaga", "United States", 1986, "Pop");
+INSERT INTO female_artists VALUES (7, "Nicki Minaj", "Trinidad and Tobago", 1982 , "Hip hop");
+INSERT INTO female_artists VALUES (8, "Rihanna", "Barbados", 1988, "Pop");
+INSERT INTO female_artists VALUES (9, "Camila Cabello", "Cuba", 1997 , "Pop");
+INSERT INTO female_artists VALUES (10, "Selena Gomez", "United States", 1992  , "Pop");
+INSERT INTO female_artists VALUES (11, "Doja Cat", "United States", 1995, "Hip hop");
+INSERT INTO female_artists VALUES (12, "Beyoncé", "United States", 1981, "R&B");
+INSERT INTO female_artists VALUES (13, "KAROL G", "Colombia", 1991, "Reguetón");
+INSERT INTO female_artists VALUES (14, "Katy Perry", "United States", 1984,"Pop");
+INSERT INTO female_artists VALUES (15, "Megan Thee Stallion", "United States", 1995 ,"Hip hop");
+INSERT INTO female_artists VALUES (16, "Cardi B", "United States", 1992,"Hip hop");
+INSERT INTO female_artists VALUES (17, "Sia", "Australia", 1975 ,"Pop");
+INSERT INTO female_artists VALUES (18, "Ava Max", "United States", 1994,"Pop");
+INSERT INTO female_artists VALUES (19, "Tones and I", "Australia", 1995,"Pop");
+INSERT INTO female_artists VALUES (20, "Lana Del Rey", "United States", 1985,"Baroque pop");
+INSERT INTO female_artists VALUES (21, "Shakira", "Colombia", 1977 ,"Pop");
+INSERT INTO female_artists VALUES (22, "Miley Cyrus", "United States", 1992,"Pop");
+INSERT INTO female_artists VALUES (23, "Adele", "United Kingdom", 1988,"Pop");
+INSERT INTO female_artists VALUES (24, "Demi Lovato", "United States", 1992,"Pop");
+INSERT INTO female_artists VALUES (25, "Anitta", "Brazil", 1993,"Funk carioca");
+INSERT INTO female_artists VALUES (26, "Natti Natasha", "Dominican Republic", 1986,"Reggaeton");
+INSERT INTO female_artists VALUES (27, "Marília Mendonça", "Brazil", 1995,"Sertaneja");
+INSERT INTO female_artists VALUES (28, "Bebe Rexha", "United States", 1989,"Pop");
+INSERT INTO female_artists VALUES (29, "Ellie Goulding", "United Kingdom", 1986,"Electropop");
+INSERT INTO female_artists VALUES (30, "Pink", "United States", 1979,"Pop");
+INSERT INTO female_artists VALUES (31, "Melanie Martinez", "United States", 1995,"Pop");
+INSERT INTO female_artists VALUES (32, "Julia Michaels", "United States", 1993,"Pop");
+INSERT INTO female_artists VALUES (33, "Beabadoobe", "Philippines", 2000,"Indie rock");
+INSERT INTO female_artists VALUES (34, "Kehlani", "United States", 1995 ,"R&B");
+INSERT INTO female_artists VALUES (35, "Anne-Marie", "United Kingdom", 1991,"Pop");
+INSERT INTO female_artists VALUES (36, "Lizzo", "United States", 1988 ,"Hip hop");
+INSERT INTO female_artists VALUES (37, "Becky G", "United States", 1997,"Hip hop");
+INSERT INTO female_artists VALUES (38, "Alicia Keys", "United States", 1981,"R&B");
+INSERT INTO female_artists VALUES (39, "Summer Walker", "United States", 1996,"R&B");
+INSERT INTO female_artists VALUES (40, "Britney Spears", "United States", 1981,"Pop");
+INSERT INTO female_artists VALUES (41, "ROSALÍA", "Spain", 1992,"Flamenco pop");
+INSERT INTO female_artists VALUES (42, "Whitney Houston", "United States", 1963,"R&B");
+INSERT INTO female_artists VALUES (43, "Jhené Aiko", "United States", 1988,"R&B");
+INSERT INTO female_artists VALUES (44, "Alessia Cara", "Canada", 1996,"Pop");
+INSERT INTO female_artists VALUES (45, "Zara Larsson", "Sweden", 1997,"Pop");
+INSERT INTO female_artists VALUES (46, "Becky Hill", "United Kingdom", 1994 ,"R&B");
+INSERT INTO female_artists VALUES (47, "Tate McRae", "Canada", 2003,"Pop");
+INSERT INTO female_artists VALUES (48, "SZA", "United States", 1989,"R&B");
+INSERT INTO female_artists VALUES (49, "BENEE", "New Zealand", 2000,"Alternative pop");
+INSERT INTO female_artists VALUES (50, " Madison Beer", "United States", 1999,"Pop");
+
+
+
+
+
+
+
+
+
