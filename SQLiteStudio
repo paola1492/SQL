@@ -1,0 +1,54 @@
+
+--Type that line into your SQL editor in SQLite. What columns are in the customers table? order_id / acctnum
+--Now do the same thing but take a look at the JanSales table instead of the customers table. What columns are in that one? 
+--order_id / Product / Quantity / price / orderdate / location
+
+---#1. How many orders were placed in January? 
+SELECT orderID, COUNT(*) FROM BIT_DB.JanSales ;
+ANSWER orderID	COUNT(*)
+---------141234	9723
+
+--#2. How many of those orders were for an iPhone? 
+SELECT orderID, Count(*) FROM  BIT_DB.JanSales WHERE Product = 'iPhone';
+--Answer 379
+
+--#3. Select the customer account numbers for all the orders that were placed in February. 
+
+SELECT acctnum
+FROM BIT_DB.customers cust
+INNER JOIN BIT_DB.FebSales Feb
+ON cust.order_id=FEB.orderid
+
+--#4. Which product was the cheapest one sold in January, and what was the price? 
+
+--Which product was the cheapest one sold in January, and what was the price? For this one, you are going to use the commands distinct and MIN(). Using 'SELECT distinct' 
+--will remove duplicate rows from your results. The MIN() command will allow you to select the smallest value from the price column. This is a hard one -
+ --see if you can do it, but don't be afraid to look at the hint or answer if you need to!
+ 
+SELECT MIN(Price), product FROM BIT_DB.JanSales; 
+ANSWER MIN(Price)	product
+2.99	AAA Batteries (4-pack)
+
+---#5. What is the total revenue for each product sold in January?
+
+SELECT sum(quantity)*price AS revenue
+,product
+FROM BIT_DB.JanSales
+GROUP BY product
+
+--#6. Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
+
+SELECT SUM(quantity),product,SUM(quantity)*(price) FROM BIT_DB.FebSales WHERE location ='548 Lincoln St, Seattle, WA 98101';
+SUM(quantity)	product	SUM(quantity) * (price)
+
+--ANSWER 2	AA Batteries (4-pack)	7.68
+
+--#7. How many customers ordered more than 2 products at a time, and what was the average amount spent for those customers? 
+
+SELECT 
+count(cust.acctnum), 
+avg(quantity)*price
+FROM BIT_DB.FebSales Feb
+LEFT JOIN BIT_DB.customers cust
+ON FEB.orderid=cust.order_id
+WHERE Feb.Quantity>2
