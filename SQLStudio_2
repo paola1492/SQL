@@ -1,0 +1,23 @@
+** SORT BY DATES BETWEEN**
+SELECT orderdate
+FROM BIT_DB.FebSales
+WHERE orderdate between '02/13/19 00:00' AND '02/18/19 00:00'
+
+
+** SEARCH FOR A SALE LOCATION ON A SPECIFIC DATE**
+SELECT location
+FROM BIT_DB.FebSales 
+WHERE orderdate = '02/18/19 01:35'
+
+**SEARCH FOR A SALE QUANTITY ON A MATCHING ANY VALUE, USING COMMANDS: 'like' searches the column you choose for the values you enter following like. 
+The'%'operator informs the SQL code that you are looking for a value that can match anything.**
+
+SELECT sum(quantity)
+FROM BIT_DB.FebSales 
+WHERE orderdate like '02/18/19%'
+
+**select all February Battery variants sold**
+
+SELECT distinct Product
+FROM BIT_DB.FebSales
+WHERE Product like '%Batteries%'
