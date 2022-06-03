@@ -1,4 +1,28 @@
+--**CREATE TABLE OF TOP SONGS IN 2021 ON SPOTIFY**
+***DATA SOURECE: Kaggle***
 
+CREATE TABLE BIT_DB.Spotifydata (
+id integer PRIMARY KEY,
+artist_name varchar NOT NULL,
+track_name varchar NOT NULL,
+track_id varchar NOT NULL,
+popularity integer NOT NULL,
+danceability decimal(4,3) NOT NULL,
+energy decimal(4,3) NOT NULL,
+key integer NOT NULL,
+loudness decimal(5,3) NOT NULL,
+mode integer NOT NULL,
+speechiness decimal(5,4) NOT NULL,
+acousticness decimal(6,5) NOT NULL,
+instrumentalness text NOT NULL,
+liveness decimal(5,4) NOT NULL,
+valence decimal(4,3) NOT NULL,
+tempo decimal(6,3) NOT NULL,
+duration_ms integer NOT NULL,
+time_signature integer NOT NULL 
+)
+
+*QUERIE*
 --**ALL DATA**
 --SELECT * FROM BIT_DB.Spotifydata;
 
@@ -27,3 +51,4 @@ FROM BIT_DB.Spotifydata WHERE track_name like '%feat%';
 
 SELECT track_name, artist_name
 FROM BIT_DB.Spotifydata WHERE danceability >=0.7 AND popularity >=80;
+
