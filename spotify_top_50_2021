@@ -1,0 +1,29 @@
+
+--**ALL DATA**
+--SELECT * FROM BIT_DB.Spotifydata;
+
+--**TOP 10 SONGS RANKED ACCORDING TO POPULARITY**
+
+SELECT track_name, artist_name, popularity
+FROM BIT_DB.Spotifydata GROUP BY popularity ORDER BY popularity DESC
+LIMIT 10;
+
+--** Top ten most popular artists based on average rating** **
+
+SELECT artist_name, AVG (popularity) AS media_pop
+FROM BIT_DB.Spotifydata GROUP BY artist_name ORDER BY media_pop DESC LIMIT 10;
+
+--**Top songs having a duration of four minutes or more**
+
+
+SELECT track_name, artist_name
+FROM BIT_DB.Spotifydata WHERE duration_ms >= 240000;
+
+--**a list of all duet songs**
+SELECT track_name, artist_name
+FROM BIT_DB.Spotifydata WHERE track_name like '%feat%';
+
+--dancitability hits with a rating of 80 or higher
+
+SELECT track_name, artist_name
+FROM BIT_DB.Spotifydata WHERE danceability >=0.7 AND popularity >=80;
